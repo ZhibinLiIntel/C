@@ -25,5 +25,6 @@ int main(int argc, char **argv)
 	while(ent = readdir(dir)) {
 		printf("%s\n", ent->d_name);
 	}
+	close(dir);//remember to close 
 	return 0;
 }
