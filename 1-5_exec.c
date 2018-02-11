@@ -25,8 +25,8 @@ int main(int argc, char **argv)
 		}
 		else{
 			waitpid(pid, &status, 0);
-			printf("%% ");
 		}
+		printf("%% ");
 	}
 	return 0;
 }
