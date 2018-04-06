@@ -8,7 +8,7 @@
 #include <sys/stat.h>
 #include <errno.h>
 
-
+//enhanced version of cp command, but the comments are still in Chinese
 int is_file_exist(const char *file_path)
 {
 	if(file_path == NULL)
