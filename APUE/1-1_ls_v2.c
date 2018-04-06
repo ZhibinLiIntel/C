@@ -11,6 +11,7 @@
 #include <pwd.h> 
 #include <sys/wait.h>
 
+//color support for different type
 #define COLOR_R (char *)"\33[0m"  
 #define COLOR_D (char *)"\33[01m\33[34m"  
 #define COLOR_L (char *)"\33[01m\33[36m"  
