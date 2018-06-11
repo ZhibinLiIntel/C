@@ -11,7 +11,7 @@ int main(void)
 	char a[] = "ABCDEFGH";
 	char b[] = "abcdefgh";
 	int fd;
-	fd = open("file_with_blank", O_RDWR|O_CREAT|O_EXCL);
+	fd = open("file_with_blank", O_RDWR|O_CREAT|O_EXCL, 0644);
 	write(fd, a, sizeof(a));
 	lseek(fd, 1234, SEEK_SET);
 	write(fd, b, sizeof(b));
