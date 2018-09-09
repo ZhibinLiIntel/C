@@ -1,4 +1,5 @@
-#include "link_list-operations.h"
+#include "defs.h"
+#include <stdbool.h>
 
 static bool
 palindrome(listnode head)

@@ -1,4 +1,4 @@
-#include "btree.h"
+#include "defs.h"
 
 treenode
 reconstruct(int pre[], int in[], int len)

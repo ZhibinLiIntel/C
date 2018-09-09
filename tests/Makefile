@@ -1,13 +1,30 @@
 CC = gcc
 CFLAGS = -g -O2
-SOURCE_FILE = $(wildcard *.c)
-TARGETS = $(SOURCE_FILE:%.c=%)
+#SOURCE_FILE = $(wildcard *.c)
+SOURCE_FILE = 	quicksort.c \
+		replace-space.c \
+		td-array.c
+TREE_FILE = constructbtree.c
+LINKLIST_FILE = reverse_linklist.c \
+		palindrome-list.c
+TARGETS = $(SOURCE_FILE:%.c=%) $(TREE_FILE:%.c=%) $(LINKLIST_FILE:%.c=%)
 
 .PHONY: all clean
-all: $(SOURCE_FILE)
+
+all: $(SOURCE_FILE) linklist btree
 	@for name in $(SOURCE_FILE); \
 	do \
 		$(CC) $(CFLAGS) "$$name" -o `echo "$$name" | sed s/.c$$//g`; \
+	done
+linklist:
+	@for name in $(LINKLIST_FILE); \
+	do \
+		$(CC) $(CFLAGS) linklist.c "$$name" -o `echo "$$name" | sed s/.c$$//g`; \
+	done
+btree:
+	@for name in $(TREE_FILE); \
+	do \
+		$(CC) $(CFLAGS) btree.c "$$name" -o `echo "$$name" | sed s/.c$$//g`; \
 	done
 clean:
 	rm -f $(TARGETS) *.out
