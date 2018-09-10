@@ -29,3 +29,23 @@ _recursive_postorder(treenode tree)
 	_recursive_postorder(tree->rchild);
 	printf("%d ", tree->val);
 }
+
+treenode
+construct(int pre[], int in[], int len)
+{
+	if (len == 0)
+		return NULL;
+
+	treenode new = malloc(sizeof(struct node));
+	new->val = pre[0];
+
+	for (int i = 0; i < len; i++) {
+		if (in[i] == pre[0]) {
+			new->lchild = construct(pre + 1, in, i);
+			new->rchild = construct(pre + 1 + i, in + i + 1, len - i - 1);
+			break;
+		}
+	}
+
+	return new;
+}

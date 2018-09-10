@@ -30,3 +30,7 @@ extern void _recursive_postorder(treenode tree);
 		_recursive_postorder(tree); \
 		printf("\n"); \
 	} while(0)
+
+extern treenode construct(int pre[], int in[], int len);
+#define construct_binary_tree(pre, in) \
+	construct(pre, in, sizeof(in) / sizeof(int))

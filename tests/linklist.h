@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-typedef struct listnode {
+struct listnode {
 	int val;
 	struct listnode *next;
-} *listnode;
+};
+typedef struct listnode *listnode;

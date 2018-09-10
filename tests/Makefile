@@ -4,8 +4,9 @@ CFLAGS = -g -O2
 SOURCE_FILE = 	quicksort.c \
 		replace-space.c \
 		td-array.c
-TREE_FILE = constructbtree.c
-LINKLIST_FILE = reverse_linklist.c \
+TREE_FILE = 	reconstruct-btree.c \
+		non-recursive-traversebtree.c
+LINKLIST_FILE = reverse-linklist.c \
 		palindrome-list.c
 TARGETS = $(SOURCE_FILE:%.c=%) $(TREE_FILE:%.c=%) $(LINKLIST_FILE:%.c=%)
 

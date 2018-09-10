@@ -5,5 +5,4 @@ struct node {
 	struct node *lchild;
 	struct node *rchild;
 };
-
 typedef struct node *treenode;
