@@ -1,7 +1,8 @@
 CC = gcc
 CFLAGS = -g -O2
 #SOURCE_FILE = $(wildcard *.c)
-SOURCE_FILE = 	quicksort.c \
+SOURCE_FILE = 	insertsort.c \
+		quicksort.c \
 		replace-space.c \
 		td-array.c
 TREE_FILE = 	reconstruct-btree.c \
