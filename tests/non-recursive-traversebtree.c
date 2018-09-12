@@ -1,51 +1,6 @@
 #include "defs.h"
 #include <stdbool.h>
 
-#define MAX 32
-
-struct stack {
-	int item[MAX];
-	int top;
-};
-typedef struct stack *pstack;
-
-static pstack
-init_stack()
-{
-	pstack stack = (pstack)malloc(sizeof(struct stack));
-	if (stack)
-		stack->top = 0;
-	return stack;
-}
-
-static void
-push(pstack stack, int data)
-{
-	stack->item[stack->top++] = data;
-}
-
-static void
-pop(pstack stack)
-{
-	if (stack->top == 0)
-		return;
-	stack->top--;
-}
-
-static bool
-isempty(pstack stack)
-{
-	if (stack->top == 0)
-		return true;
-	return false;
-}
-
-static int
-gettop(pstack stack)
-{
-	return stack->item[1];
-}
-
 static void
 non_recursive_preorder(treenode tree)
 {
