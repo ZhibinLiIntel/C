@@ -11,7 +11,7 @@ LINKLIST_FILE = reverse-linklist.c \
 		palindrome-list.c
 TARGETS = $(SOURCE_FILE:%.c=%) $(TREE_FILE:%.c=%) $(LINKLIST_FILE:%.c=%)
 
-.PHONY: all clean
+.PHONY: all linklist btree clean
 
 all: $(SOURCE_FILE) linklist btree
 	@for name in $(SOURCE_FILE); \
