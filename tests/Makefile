@@ -1,7 +1,8 @@
 CC = gcc
-CFLAGS = -g -O2
+CFLAGS = -g
 #SOURCE_FILE = $(wildcard *.c)
-SOURCE_FILE = 	insertsort.c \
+SOURCE_FILE = 	number-one-in-binary.c \
+		insertsort.c \
 		quicksort.c \
 		replace-space.c \
 		td-array.c
