@@ -19,6 +19,23 @@ non_recursive_preorder(treenode tree)
 }
 
 static void
+non_recursive_inorder(treenode tree)
+{
+	treenode stack[1000], node = tree;
+	int top = 0;
+	while (node || top) {
+		if (node) {
+			stack[top++] = node;
+			node = node->lchild;
+		} else {
+			node = stack[--top];
+			printf("%d ", node->val);
+			node = node->rchild;
+		}
+	}
+}
+
+static void
 non_recursive_postorder(treenode tree)
 {
 	treenode stack[1000], node = tree, r = NULL;
@@ -54,6 +71,11 @@ main(void)
 	non_recursive_preorder(tree);
 	printf("\n");
 	recursive_preorder(tree);
+
+	printf("non-recursive inorder traverse: ");
+	non_recursive_inorder(tree);
+	printf("\n");
+	recursive_inorder(tree);
 
 	printf("non-recursive postorder traverse: ");
 	non_recursive_postorder(tree);
