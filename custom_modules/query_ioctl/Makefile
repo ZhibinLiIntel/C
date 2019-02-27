@@ -10,7 +10,7 @@ module:
  
 clean:
 	$(MAKE) -C $(KERNEL_SOURCE) SUBDIRS=$(PWD) clean
-	${RM} query_app
+	${RM} query_main
  
 # Otherwise KERNELRELEASE is defined; we've been invoked from the
 # kernel build system and can use its language.

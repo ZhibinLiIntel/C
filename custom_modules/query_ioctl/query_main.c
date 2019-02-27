@@ -13,7 +13,7 @@ void get_vars(int fd)
  
     if (ioctl(fd, QUERY_GET_VARIABLES, &q) == -1)
     {
-        perror("query_apps ioctl get");
+        perror("query ioctl get");
     }
     else
     {
@@ -26,7 +26,7 @@ void clr_vars(int fd)
 {
     if (ioctl(fd, QUERY_CLR_VARIABLES) == -1)
     {
-        perror("query_apps ioctl clr");
+        perror("query ioctl clr");
     }
 }
 void set_vars(int fd)
@@ -49,7 +49,7 @@ void set_vars(int fd)
  
     if (ioctl(fd, QUERY_SET_VARIABLES, &q) == -1)
     {
-        perror("query_apps ioctl set");
+        perror("query ioctl set");
     }
 }
 
@@ -96,7 +96,7 @@ int main(int argc, char *argv[])
     fd = open(file_name, O_RDWR);
     if (fd == -1)
     {
-        perror("query_apps open");
+        perror("query open");
         return 2;
     }
  
